@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 
-# Inherit some common Lineage stuff.
+# Inherit some common aicp stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -50,7 +50,7 @@ PRODUCT_PACKAGES += \
 
 # Device identifiers
 PRODUCT_DEVICE := evert
-PRODUCT_NAME := lineage_evert
+PRODUCT_NAME := aicp_evert
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto g(6) plus
 PRODUCT_MANUFACTURER := motorola
@@ -60,3 +60,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="evert-user 9 PPW29.116-16-30 40d1e release-keys"
 
 BUILD_FINGERPRINT := motorola/evert/evert:9/PPW29.116-16-30/40d1e:user/release-keys
+
+# AICP Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="Jeferson Oliveira (jro1979oliver)"
